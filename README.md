@@ -11,7 +11,7 @@ Lawrent è una piccola shell desktop Linux contenuta in **una singola finestra G
 
 GTK4 è il toolkit della shell perché fornisce la singola finestra di primo livello, il routing dell'input, l'accessibilità, lo stile CSS e i widget nativi. Web utilizza WebKitGTK quando installato. Il terminale utilizza un vero e proprio sottoprocesso che esegue `$SHELL`; File legge la directory home reale; Note e Impostazioni sono applicazioni native GTK.
 
-Le applicazioni Linux esterne sono una funzionalità separata. Su X11, un futuro backend può utilizzare XEmbed/XReparentWindow o un bridge del compositore X11 per collegare una finestra nativa. Su Wayland, i client arbitrari non possono essere riassegnati come figli da un'altra applicazione: Wedexktop lo rileva e non dichiara di integrarli. Un backend di produzione dovrebbe utilizzare protocolli gestiti dal compositore o un compositore nidificato dedicato, ove disponibile. D-Bus e il rilevamento di `.desktop` vengono utilizzati per i metadati e l'avvio delle applicazioni, non come API di embedding simulate.
+Le applicazioni Linux esterne sono una funzionalità separata. Su X11, un futuro backend può utilizzare XEmbed/XReparentWindow o un bridge del compositore X11 per collegare una finestra nativa. Su Wayland, i client arbitrari non possono essere riassegnati come figli da un'altra applicazione: Lawrent lo rileva e non dichiara di integrarli. Un backend di produzione dovrebbe utilizzare protocolli gestiti dal compositore o un compositore nidificato dedicato, ove disponibile. D-Bus e il rilevamento di `.desktop` vengono utilizzati per i metadati e l'avvio delle applicazioni, non come API di embedding simulate.
 
 Livelli di funzionalità:
 
@@ -33,7 +33,7 @@ Livelli di funzionalità:
 
 - Processo terminale reale, elenco reale del filesystem, browser WebKit quando disponibile, note e impostazioni.
 
-- Rilevamento della voce `.desktop` in `wedexktop/core/app_manager.py`.
+- Rilevamento della voce `.desktop` in `lawrent/core/app_manager.py`.
 
 ## Installazione su Linux
 
@@ -44,7 +44,7 @@ GTK e PyGObject sono pacchetti di sistema nella maggior parte delle distribuzion
 ./run.sh
 ```
 
-Lo script installa anche `python3-pip` e `python3-venv`, crea `.venv` con accesso ai pacchetti GTK di sistema e installa Wedexktop in modalità editabile. Questo evita l'errore `No module named pip` e i blocchi degli ambienti Python gestiti dal sistema. I pacchetti richiesti sono GTK4, PyGObject e, facoltativamente, WebKitGTK 6.0. L'applicazione grafica non può essere eseguita nativamente su Windows perché la sua piattaforma di destinazione è Linux/GTK; `python -m compileall -q lawrent` controlla comunque il codice sorgente di Python su qualsiasi piattaforma.
+Lo script installa anche `python3-pip` e `python3-venv`, crea `.venv` con accesso ai pacchetti GTK di sistema e installa Lawrent in modalità editabile. Questo evita l'errore `No module named pip` e i blocchi degli ambienti Python gestiti dal sistema. I pacchetti richiesti sono GTK4, PyGObject e, facoltativamente, WebKitGTK 6.0. L'applicazione grafica non può essere eseguita nativamente su Windows perché la sua piattaforma di destinazione è Linux/GTK; `python -m compileall -q lawrent` controlla comunque il codice sorgente di Python su qualsiasi piattaforma.
 
 ## Scorciatoie
 
