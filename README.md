@@ -1,5 +1,10 @@
 # Lawrent
 
+<img width="479" height="243" alt="image" src="https://github.com/user-attachments/assets/6f5dc041-b4a6-408a-bb3b-94d77007d525" />
+
+
+
+
 Lawrent è una piccola shell desktop Linux contenuta in **una singola finestra GTK4 massimizzata**. Le applicazioni native sono widget GTK composti da un window manager interno, quindi l'apertura di un'applicazione non crea un'altra finestra di primo livello.
 
 ## Architettura e integrazione
