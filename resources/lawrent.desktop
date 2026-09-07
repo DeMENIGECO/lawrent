@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=Lawrent
+Comment=Desktop environment contained in one GTK window
+Exec=lawrent
+Icon=computer
+Terminal=false
+Categories=System;DesktopSettings;
